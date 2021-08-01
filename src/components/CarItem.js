@@ -2,9 +2,8 @@ import React from 'react'
 import { ImageBackground, StyleSheet, Text, View, Dimensions } from 'react-native';
 import StyledButton from './StyledButton';
 
-const CarItem = ({ image, title, subtitle }) => {
 
-    console.log(image, title, '-----------------------');
+const CarItem = ({ image, title, subtitle }) => {
 
     return (
         <View style={styles.carContainer}>
@@ -47,8 +46,8 @@ const styles = StyleSheet.create({
     image: {
         width: '100%',
         height: '100%',
+        resizeMode: 'cover',
         position: 'absolute',
-        resizeMode: 'cover'
     },
     titles: {
         marginTop: '30%',
