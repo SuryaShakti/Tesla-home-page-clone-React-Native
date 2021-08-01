@@ -1,14 +1,13 @@
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
-import CarItem from './src/components/CarItem';
+import { StyleSheet, View } from 'react-native';
+import Header from './src/components/Header/index';
 import CarsList from './src/components/CarsList/index';
 
 export default function App() {
   return (
     <View style={styles.container}>
-
+      <Header />
       <CarsList />
-
     </View>
   );
 }
