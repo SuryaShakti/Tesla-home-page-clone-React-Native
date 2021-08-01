@@ -14,20 +14,22 @@ const CarItem = ({ image, title, subtitle }) => {
                 <Text style={styles.subtitle}>{subtitle}</Text>
             </View>
 
-            <StyledButton
-                text={'Custom Order'}
-                type={'primary'}
-                onPress={() => {
-                    console.warn('Custom Order was Pressed')
-                }}
-            />
-            <StyledButton
-                text={'Exsting Inventory'}
-                type={'secondary'}
-                onPress={() => {
-                    console.warn('Existing Inventory was Pressed')
-                }}
-            />
+            <View style={styles.buttonsContainer}>
+                <StyledButton
+                    text={'Custom Order'}
+                    type={'primary'}
+                    onPress={() => {
+                        console.warn('Custom Order was Pressed')
+                    }}
+                />
+                <StyledButton
+                    text={'Exsting Inventory'}
+                    type={'secondary'}
+                    onPress={() => {
+                        console.warn('Existing Inventory was Pressed')
+                    }}
+                />
+            </View>
         </View>
     )
 }
@@ -57,5 +59,10 @@ const styles = StyleSheet.create({
     subtitle: {
         fontSize: 16,
         color: '#5c5e62'
+    },
+    buttonsContainer: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        paddingBottom: 50
     }
 });
