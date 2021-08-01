@@ -1,8 +1,11 @@
 import React from 'react'
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, Dimensions } from 'react-native';
 import StyledButton from './StyledButton';
 
 const CarItem = ({ image, title, subtitle }) => {
+
+    console.log(image, title, '-----------------------');
+
     return (
         <View style={styles.carContainer}>
             <ImageBackground
@@ -37,15 +40,15 @@ const CarItem = ({ image, title, subtitle }) => {
 export default CarItem
 
 const styles = StyleSheet.create({
+    carContainer: {
+        width: '100%',
+        height: Dimensions.get('window').height,
+    },
     image: {
         width: '100%',
         height: '100%',
         position: 'absolute',
         resizeMode: 'cover'
-    },
-    carContainer: {
-        width: '100%',
-        height: '100%'
     },
     titles: {
         marginTop: '30%',
@@ -61,8 +64,8 @@ const styles = StyleSheet.create({
         color: '#5c5e62'
     },
     buttonsContainer: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        paddingBottom: 50
+        position: 'absolute',
+        bottom: 50,
+        width: '100%'
     }
 });
